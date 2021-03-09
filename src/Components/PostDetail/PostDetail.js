@@ -11,7 +11,7 @@ const PostDetail = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setPosts(data))
-    }, []);
+    }, [id]);
 
     useEffect(() => {
         const url = `https://jsonplaceholder.typicode.com/comments?postId=${id}`;
@@ -19,7 +19,7 @@ const PostDetail = () => {
         .then(res => res.json())
         .then(data => setComments(data))
 
-    }, []);
+    }, [id]);
 
 
     const postStyle = {
